@@ -27,7 +27,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
+        use: [ // Configuración correcta de loaders
+          "style-loader", // Inyectar estilos en el DOM
+          "css-loader",   // Procesar archivos CSS
+        ],
       }
     ],
   },
